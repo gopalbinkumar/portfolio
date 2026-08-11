@@ -10,7 +10,7 @@
                 </svg>
                 <span>Dzaki Zulfahmi</span>
             </div>
-            <p class="footer-copy">&copy; <?= $year ?> Dzaki Zulfahmi. Dibuat dengan <i class="bi bi-heart-fill text-danger"></i> di Surabaya.</p>
+            <!-- <p class="footer-copy">&copy; <?= $year ?> Dzaki Zulfahmi. Dibuat dengan <i class="bi bi-heart-fill text-danger"></i> di Surabaya.</p> -->
             <div class="footer-socials">
                 <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <i class="bi bi-github"></i>

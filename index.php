@@ -23,8 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_action']) && $_P
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Portfolio profesional Dzaki Zulfahmi — Web Developer & Mahasiswa IT berbasis di Surabaya.">
-    <title>Dzaki Zulfahmi — Web Developer</title>
+        content="Web Portfolio Dzaki Zulfahmi — Web Developer, Mahasiswa IT, dengan pengalaman membangun aplikasi web menggunakan PHP, Laravel, MySQL, dan Bootstrap.">
+    <title>Dzaki Zulfahmi | Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.png">
 
     <!-- Preconnect fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_action']) && $_P
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css?v=2">
 </head>
 
 <body>
@@ -65,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_action']) && $_P
                 <div class="row align-items-center min-vh-100 py-5">
                     <div class="col-lg-7 order-lg-1 order-2 hero-text">
                         <span class="hero-eyebrow">Halo, saya</span>
-                        <h1 class="hero-name">Dzaki<br><em>Zulfahmi</em></h1>
+                        <h1 class="hero-name">Dzaki <em>Zulfahmi</em></h1>
                         <p class="hero-role">
                             <span class="role-badge"><i class="bi bi-code-slash"></i> Web Developer</span>
                             <span class="role-sep">&amp;</span>
@@ -84,16 +85,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_action']) && $_P
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-5 order-lg-2 order-1 text-center mb-4 mb-lg-0">
+                    <!-- <div class="col-lg-5 order-lg-2 order-1 text-center mb-4 mb-lg-0">
                         <div class="profile-photo-wrapper">
-                            <div class="profile-photo-ring"></div>
-                            <img src="assets/images/foto.jpg" alt="Foto profil" width="320" height="320"
-                                loading="lazy" class="profile-photo">
+
+                            <img src="assets/images/foto.jpg" alt="Foto profil" width="320" height="320" loading="lazy"
+                                class="profile-photo">
                             <div class="profile-badge">
                                 <i class="bi bi-patch-check-fill"></i> Open to Work
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="hero-scroll-hint">
@@ -110,17 +111,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_action']) && $_P
                     <div class="col-lg-5">
                         <div class="about-img-wrapper">
                             <img src="https://picsum.photos/seed/dzaki-about/500/600"
-                                alt="Dzaki Zulfahmi sedang bekerja" width="500" height="600" loading="lazy"
+                                alt="Dzaki Zulfahmi sedang bekerja" width="500" height="500" loading="lazy"
                                 class="about-img">
-                            <div class="about-xp-card">
-                                <span class="xp-number">3+</span>
-                                <span class="xp-label">Tahun Belajar<br>Web Dev</span>
-                            </div>
                         </div>
                     </div>
                     <div class="col-lg-7">
-                        <div class="section-label">Tentang Saya</div>
-                        <h2 class="section-heading">Siapa <em>Dzaki</em>?</h2>
+                        <div class="section-label">Tentang</div>
+                        <h2 class="section-heading">Profil Saya</h2>
                         <p class="section-body">
                             Saya adalah mahasiswa Teknologi Informasi yang passionate dalam membangun solusi berbasis
                             web.
@@ -137,29 +134,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_action']) && $_P
                             <div class="about-info-item">
                                 <i class="bi bi-person"></i>
                                 <div>
-                                    <small>Nama</small>
-                                    <strong>Dzaki Zulfahmi</strong>
+                                    <small>Nama Lengkap</small>
+                                    <strong>Muhammad Dzaki Zulfahmi Mansur</strong>
                                 </div>
                             </div>
+                            <?php
+                            $tanggal_lahir = '2003-11-19';
+                            $lahir = new DateTime($tanggal_lahir);
+                            $hari_ini = new DateTime();
+                            $umur = $hari_ini->diff($lahir)->y;
+                            ?>
                             <div class="about-info-item">
                                 <i class="bi bi-calendar3"></i>
                                 <div>
                                     <small>Umur</small>
-                                    <strong>20 Tahun</strong>
+                                    <strong><?= $umur ?> Tahun</strong>
                                 </div>
                             </div>
                             <div class="about-info-item">
                                 <i class="bi bi-envelope"></i>
                                 <div>
                                     <small>Email</small>
-                                    <strong>dzaki@example.com</strong>
+                                    <strong>dzakizulfahmi19@gmail.com</strong>
                                 </div>
                             </div>
                             <div class="about-info-item">
                                 <i class="bi bi-geo-alt"></i>
                                 <div>
                                     <small>Lokasi</small>
-                                    <strong>Surabaya, Jawa Timur</strong>
+                                    <strong>Makassar, Sulawesi Selatan</strong>
                                 </div>
                             </div>
                         </div>
@@ -173,7 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_action']) && $_P
             <div class="container">
                 <div class="section-header text-center">
                     <div class="section-label">Kemampuan</div>
-                    <h2 class="section-heading">Tech <em>Stack</em> Saya</h2>
+                    <h2 class="section-heading">Tech Stack Saya</h2>
                     <p class="section-subtext">Teknologi yang saya gunakan dalam membangun proyek nyata.</p>
                 </div>
 
@@ -258,81 +261,127 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_action']) && $_P
             <div class="container">
                 <div class="section-header text-center">
                     <div class="section-label">Portofolio</div>
-                    <h2 class="section-heading">Proyek <em>Pilihan</em></h2>
+                    <h2 class="section-heading">Proyek Pilihan</h2>
                     <p class="section-subtext">Beberapa proyek yang pernah saya kerjakan.</p>
                 </div>
 
-                <div class="row g-4 mt-2">
-                    <?php
-                    $projects = [
-                        [
-                            'title' => 'Sistem Manajemen Siswa',
-                            'desc' => 'Aplikasi web untuk mengelola data siswa, nilai, absensi, dan laporan akademik. Dibangun dengan Laravel, MySQL, dan Bootstrap 5 menggunakan role-based access control.',
-                            'tags' => ['Laravel', 'MySQL', 'Bootstrap 5', 'RBAC'],
-                            'image' => 'https://picsum.photos/seed/student-mgmt/600/380',
-                            'demo' => '#',
-                            'github' => '#',
-                            'color' => 'teal',
-                        ],
-                        [
-                            'title' => 'Sistem Inventaris Sekolah',
-                            'desc' => 'Platform manajemen inventaris untuk sekolah. Fitur meliputi pencatatan barang, peminjaman, pengembalian, laporan, dan dashboard statistik.',
-                            'tags' => ['Laravel', 'PHP', 'MySQL', 'Chart.js'],
-                            'image' => 'https://picsum.photos/seed/inventory-school/600/380',
-                            'demo' => '#',
-                            'github' => '#',
-                            'color' => 'green',
-                        ],
-                        [
-                            'title' => 'Website Rubik\'s Cube',
-                            'desc' => 'Website interaktif seputar dunia Rubik\'s Cube — tutorial, teknik solving, timer kompetisi, dan forum komunitas. Frontend modern dengan PHP native.',
-                            'tags' => ['PHP', 'JavaScript', 'Bootstrap 5', 'CSS3'],
-                            'image' => 'https://picsum.photos/seed/rubiks-cube-web/600/380',
-                            'demo' => '#',
-                            'github' => '#',
-                            'color' => 'orange',
-                        ],
-                    ];
-                    foreach ($projects as $idx => $p): ?>
-                        <div class="col-lg-4 col-md-6">
-                            <article class="project-card h-100">
-                                <div class="project-img-wrap">
-                                    <img src="<?= $p['image'] ?>" alt="Screenshot <?= $p['title'] ?>" width="600"
-                                        height="380" loading="lazy" class="project-img">
-                                    <div class="project-overlay">
-                                        <a href="<?= $p['demo'] ?>" class="btn-icon" aria-label="Demo <?= $p['title'] ?>"
-                                            target="_blank" rel="noopener noreferrer">
-                                            <i class="bi bi-eye"></i>
-                                        </a>
-                                        <a href="<?= $p['github'] ?>" class="btn-icon"
-                                            aria-label="GitHub <?= $p['title'] ?>" target="_blank"
-                                            rel="noopener noreferrer">
-                                            <i class="bi bi-github"></i>
-                                        </a>
+                <div class="project-slider mt-4">
+                    <button class="project-nav project-nav-prev" type="button" aria-label="Project sebelumnya">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+
+                    <div class="project-track" id="projectTrack">
+                        <?php
+                        $projects = [
+                            [
+                                'title' => 'Sistem Manajemen Siswa',
+                                'desc' => 'Aplikasi web untuk mengelola data siswa, nilai, absensi, dan laporan akademik. Dibangun dengan Laravel, MySQL, dan Bootstrap 5 menggunakan role-based access control.',
+                                'tags' => ['Laravel', 'MySQL', 'Bootstrap 5', 'RBAC'],
+                                'image' => 'https://picsum.photos/seed/student-mgmt/600/380',
+                                'demo' => '#',
+                                'github' => '#',
+                                'color' => 'teal',
+                            ],
+                            [
+                                'title' => 'Sistem Inventaris Sekolah',
+                                'desc' => 'Platform manajemen inventaris untuk sekolah. Fitur meliputi pencatatan barang, peminjaman, pengembalian, laporan, dan dashboard statistik.',
+                                'tags' => ['Laravel', 'PHP', 'MySQL', 'Chart.js'],
+                                'image' => 'https://picsum.photos/seed/inventory-school/600/380',
+                                'demo' => '#',
+                                'github' => '#',
+                                'color' => 'green',
+                            ],
+                            [
+                                'title' => 'Website Rubik\'s Cube',
+                                'desc' => 'Website interaktif seputar dunia Rubik\'s Cube — tutorial, teknik solving, timer kompetisi, dan forum komunitas. Frontend modern dengan PHP native.',
+                                'tags' => ['PHP', 'JavaScript', 'Bootstrap 5', 'CSS3'],
+                                'image' => 'https://picsum.photos/seed/rubiks-cube-web/600/380',
+                                'demo' => '#',
+                                'github' => '#',
+                                'color' => 'orange',
+                            ],
+                            [
+                                'title' => 'Sistem Manajemen Siswa',
+                                'desc' => 'Aplikasi web untuk mengelola data siswa, nilai, absensi, dan laporan akademik. Dibangun dengan Laravel, MySQL, dan Bootstrap 5 menggunakan role-based access control.',
+                                'tags' => ['Laravel', 'MySQL', 'Bootstrap 5', 'RBAC'],
+                                'image' => 'https://picsum.photos/seed/student-mgmt/600/380',
+                                'demo' => '#',
+                                'github' => '#',
+                                'color' => 'teal',
+                            ],
+                            [
+                                'title' => 'Sistem Inventaris Sekolah',
+                                'desc' => 'Platform manajemen inventaris untuk sekolah. Fitur meliputi pencatatan barang, peminjaman, pengembalian, laporan, dan dashboard statistik.',
+                                'tags' => ['Laravel', 'PHP', 'MySQL', 'Chart.js'],
+                                'image' => 'https://picsum.photos/seed/inventory-school/600/380',
+                                'demo' => '#',
+                                'github' => '#',
+                                'color' => 'green',
+                            ],
+                            [
+                                'title' => 'Website Rubik\'s Cube',
+                                'desc' => 'Website interaktif seputar dunia Rubik\'s Cube — tutorial, teknik solving, timer kompetisi, dan forum komunitas. Frontend modern dengan PHP native.',
+                                'tags' => ['PHP', 'JavaScript', 'Bootstrap 5', 'CSS3'],
+                                'image' => 'https://picsum.photos/seed/rubiks-cube-web/600/380',
+                                'demo' => '#',
+                                'github' => '#',
+                                'color' => 'orange',
+                            ],
+                        ];
+
+                        foreach ($projects as $idx => $p): ?>
+                            <div class="project-slide">
+                                <article class="project-card h-100">
+                                    <div class="project-img-wrap">
+                                        <img src="<?= $p['image'] ?>" alt="Screenshot <?= $p['title'] ?>" width="600"
+                                            height="250" loading="lazy" class="project-img">
+                                        <div class="project-overlay">
+                                            <a href="<?= $p['demo'] ?>" class="btn-icon"
+                                                aria-label="Demo <?= $p['title'] ?>" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <i class="bi bi-eye"></i>
+                                            </a>
+                                            <a href="<?= $p['github'] ?>" class="btn-icon"
+                                                aria-label="GitHub <?= $p['title'] ?>" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <i class="bi bi-github"></i>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="project-body">
-                                    <div class="project-tags">
-                                        <?php foreach ($p['tags'] as $tag): ?>
-                                            <span class="ptag"><?= $tag ?></span>
-                                        <?php endforeach; ?>
+
+                                    <div class="project-body">
+                                        <div class="project-tags">
+                                            <?php foreach ($p['tags'] as $tag): ?>
+                                                <span class="ptag"><?= $tag ?></span>
+                                            <?php endforeach; ?>
+                                        </div>
+
+                                        <h3 class="project-title"><?= $p['title'] ?></h3>
+                                        <p class="project-desc"><?= $p['desc'] ?></p>
+
+                                        <div class="project-links">
+                                            <a href="<?= $p['demo'] ?>" class="plink-demo" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <i class="bi bi-arrow-up-right-square"></i> Live Demo
+                                            </a>
+                                            <a href="<?= $p['github'] ?>" class="plink-gh" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <i class="bi bi-github"></i> GitHub
+                                            </a>
+                                        </div>
                                     </div>
-                                    <h3 class="project-title"><?= $p['title'] ?></h3>
-                                    <p class="project-desc"><?= $p['desc'] ?></p>
-                                    <div class="project-links">
-                                        <a href="<?= $p['demo'] ?>" class="plink-demo" target="_blank"
-                                            rel="noopener noreferrer">
-                                            <i class="bi bi-arrow-up-right-square"></i> Live Demo
-                                        </a>
-                                        <a href="<?= $p['github'] ?>" class="plink-gh" target="_blank"
-                                            rel="noopener noreferrer">
-                                            <i class="bi bi-github"></i> GitHub
-                                        </a>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    <?php endforeach; ?>
+                                </article>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+
+                    <button class="project-nav project-nav-next" type="button" aria-label="Project berikutnya">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+
+                    <div class="project-progress" aria-hidden="true">
+                        <span class="project-progress-bar"></span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -343,7 +392,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_action']) && $_P
                 <div class="row g-5">
                     <div class="col-lg-5">
                         <div class="section-label">Kontak</div>
-                        <h2 class="section-heading">Mari <em>Terhubung</em></h2>
+                        <h2 class="section-heading">Mari Terhubung</h2>
                         <p class="section-body">
                             Ada proyek menarik, pertanyaan, atau hanya ingin say hi?
                             Saya senang mendengar dari Anda!
@@ -354,7 +403,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_action']) && $_P
                                 <div class="ci-icon"><i class="bi bi-envelope-fill"></i></div>
                                 <div>
                                     <small>Email</small>
-                                    <strong>dzaki@example.com</strong>
+                                    <strong>dzakizulfahmi19@gmail.com</strong>
                                 </div>
                             </a>
                             <a href="https://wa.me/62812345678" class="contact-info-item" target="_blank"
@@ -362,14 +411,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_action']) && $_P
                                 <div class="ci-icon"><i class="bi bi-whatsapp"></i></div>
                                 <div>
                                     <small>WhatsApp</small>
-                                    <strong>+62 812-3456-789</strong>
+                                    <strong>+62 877 4005 1808</strong>
                                 </div>
                             </a>
                             <div class="contact-info-item">
                                 <div class="ci-icon"><i class="bi bi-geo-alt-fill"></i></div>
                                 <div>
                                     <small>Lokasi</small>
-                                    <strong>Surabaya, Jawa Timur</strong>
+                                    <strong>Makassar, Sulawesi Selatan</strong>
                                 </div>
                             </div>
                         </div>

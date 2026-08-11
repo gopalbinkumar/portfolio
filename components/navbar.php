@@ -16,7 +16,6 @@ $nav_links = [
                 <path d="M10 10 L10 26 L18 26 C22.418 26 26 22.418 26 18 C26 13.582 22.418 10 18 10 Z" fill="none" stroke="#f7f6f2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M13 18 L22 18" stroke="#f7f6f2" stroke-width="2" stroke-linecap="round"/>
             </svg>
-            <span class="brand-text">Dzaki<span>.</span></span>
         </a>
 
         <!-- Theme Toggle + Hamburger -->
